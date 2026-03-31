@@ -7,58 +7,61 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 public class RitualCenterOnBlockRightClickedProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x + 2, y + 1, z + 1))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
-			if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x + 2, y + 1, z - 1))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
-				if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x - 2, y + 1, z + 1))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
-					if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x - 2, y + 1, z - 1))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
-						if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x + 1, y + 1, z + 2))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
-							if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x - 1, y + 1, z + 2))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
-								if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x + 1, y + 1, z - 2))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
-									if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x - 1, y + 1, z - 2))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
+		boolean isAltarWrong = false;
+		isAltarWrong = false;
+		if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x + 2, y, z + 1))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
+			if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x + 2, y, z - 1))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
+				if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x - 2, y, z + 1))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
+					if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x - 2, y, z - 1))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
+						if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x + 1, y, z + 2))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
+							if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x - 1, y, z + 2))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
+								if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x + 1, y, z - 2))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
+									if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x - 1, y, z - 2))).getBlock()).toString()).equals(ForgeRegistries.BLOCKS.getKey(Blocks.CANDLE).toString())) {
 										if (world instanceof ServerLevel _level) {
 											LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-											entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y, z)));;
+											entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y, z)));
+											entityToSpawn.setVisualOnly(true);
 											_level.addFreshEntity(entityToSpawn);
 										}
-										if (!world.isClientSide() && world.getServer() != null)
-											world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("There are candles!"), false);
-									} else {
-										if (!world.isClientSide() && world.getServer() != null)
-											world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("There are no candles :("), false);
+										isAltarWrong = true;
 									}
-								} else {
-									if (!world.isClientSide() && world.getServer() != null)
-										world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("There are no candles :("), false);
 								}
-							} else {
-								if (!world.isClientSide() && world.getServer() != null)
-									world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("There are no candles :("), false);
 							}
-						} else {
-							if (!world.isClientSide() && world.getServer() != null)
-								world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("There are no candles :("), false);
 						}
-					} else {
-						if (!world.isClientSide() && world.getServer() != null)
-							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("There are no candles :("), false);
 					}
-				} else {
-					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("There are no candles :("), false);
 				}
-			} else {
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("There are no candles :("), false);
 			}
-		} else {
-			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("There are no candles :("), false);
+		}
+		if (!isAltarWrong) {
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.PORTAL, (x + 2), y, (z + 1), 10, 0, 1, 0, 0.1);
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.PORTAL, (x + 2), y, (z - 1), 10, 0, 1, 0, 0.1);
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.PORTAL, (x - 2), y, (z + 1), 10, 0, 1, 0, 0.1);
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.PORTAL, (x - 2), y, (z - 1), 10, 0, 1, 0, 0.1);
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.PORTAL, (x + 1), y, (z + 2), 10, 0, 1, 0, 0.1);
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.PORTAL, (x + 1), y, (z - 2), 10, 0, 1, 0, 0.1);
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.PORTAL, (x - 1), y, (z + 2), 10, 0, 1, 0, 0.1);
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.PORTAL, (x - 1), y, (z - 2), 10, 0, 1, 0, 0.1);
+			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ON_FIRE)), 1);
 		}
 	}
 }

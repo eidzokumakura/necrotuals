@@ -44,7 +44,7 @@ public class RitualCenterBlock extends Block {
 		double hitY = hit.getLocation().y;
 		double hitZ = hit.getLocation().z;
 		Direction direction = hit.getDirection();
-		RitualCenterOnBlockRightClickedProcedure.execute(world, x, y, z);
+		RitualCenterOnBlockRightClickedProcedure.execute(world, x, y, z, entity);
 		return InteractionResult.SUCCESS;
 	}
 }

@@ -12,6 +12,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -38,11 +42,11 @@
       "registry_name": "ritual_center",
       "metadata": {
         "files": [
-          "src/main/java/net/fatcar/necrotuals/block/RitualCenterBlock.java",
           "src/main/resources/assets/necrotuals/models/item/ritual_center.json",
           "src/main/resources/assets/necrotuals/blockstates/ritual_center.json",
+          "src/main/resources/assets/necrotuals/models/block/ritual_center.json",
           "src/main/resources/data/necrotuals/loot_tables/blocks/ritual_center.json",
-          "src/main/resources/assets/necrotuals/models/block/ritual_center.json"
+          "src/main/java/net/fatcar/necrotuals/block/RitualCenterBlock.java"
         ]
       }
     }
