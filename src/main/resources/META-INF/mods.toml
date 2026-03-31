@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="Not specified"
+
+[[mods]]
+modId="necrotuals"
+version="1.0.0"
+displayName="Necrotuals"
+displayURL="https://mcreator.net"
+credits="Created by FatCar"
+authors="Makura, Skry"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.necrotuals]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration
