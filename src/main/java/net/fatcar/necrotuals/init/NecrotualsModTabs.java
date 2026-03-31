@@ -23,6 +23,9 @@ public class NecrotualsModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 			tabData.accept(NecrotualsModBlocks.RITUAL_CENTER.get().asItem());
+		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+			tabData.accept(NecrotualsModItems.CLEAR_SOUL.get());
+			tabData.accept(NecrotualsModItems.DIRTY_SOUL.get());
 		}
 	}
 }

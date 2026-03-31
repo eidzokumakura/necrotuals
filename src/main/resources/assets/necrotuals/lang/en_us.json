@@ -1,3 +1,7 @@
 {
-  "block.necrotuals.ritual_center": "Ritual Center"
+  "block.necrotuals.ritual_center": "Ritual Center",
+  "item.necrotuals.clear_soul.description_0": "Душу можно получить убив мирное существо рядом с алтарём",
+  "item.necrotuals.dirty_soul.description_0": "Душу можно получить убив враждебное существо рядом с алтарём",
+  "item.necrotuals.dirty_soul": "Dirty Soul",
+  "item.necrotuals.clear_soul": "Clear Soul"
 }

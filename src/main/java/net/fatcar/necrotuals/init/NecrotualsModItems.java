@@ -12,11 +12,15 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.fatcar.necrotuals.item.DirtySoulItem;
+import net.fatcar.necrotuals.item.ClearSoulItem;
 import net.fatcar.necrotuals.NecrotualsMod;
 
 public class NecrotualsModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, NecrotualsMod.MODID);
 	public static final RegistryObject<Item> RITUAL_CENTER = block(NecrotualsModBlocks.RITUAL_CENTER);
+	public static final RegistryObject<Item> CLEAR_SOUL = REGISTRY.register("clear_soul", () -> new ClearSoulItem());
+	public static final RegistryObject<Item> DIRTY_SOUL = REGISTRY.register("dirty_soul", () -> new DirtySoulItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

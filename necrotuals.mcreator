@@ -32,7 +32,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Scripts"
     },
     {
       "name": "RitualCenter",
@@ -70,7 +71,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Scripts"
     },
     {
       "name": "RitualCenterOnTickUpdate",
@@ -100,6 +102,33 @@
             "type": "world"
           }
         ]
+      },
+      "path": "~/Scripts"
+    },
+    {
+      "name": "ClearSoul",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clear_soul",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fatcar/necrotuals/item/ClearSoulItem.java",
+          "src/main/resources/assets/necrotuals/models/item/clear_soul.json"
+        ]
+      }
+    },
+    {
+      "name": "DirtySoul",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirty_soul",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fatcar/necrotuals/item/DirtySoulItem.java",
+          "src/main/resources/assets/necrotuals/models/item/dirty_soul.json"
+        ]
       }
     }
   ],
@@ -109,12 +138,21 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "block.necrotuals.ritual_center": "Ritual Center"
+      "block.necrotuals.ritual_center": "Ritual Center",
+      "item.necrotuals.clear_soul.description_0": "Душу можно получить убив мирное существо рядом с алтарём",
+      "item.necrotuals.dirty_soul.description_0": "Душу можно получить убив враждебное существо рядом с алтарём",
+      "item.necrotuals.dirty_soul": "Dirty Soul",
+      "item.necrotuals.clear_soul": "Clear Soul"
     }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Scripts",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "necrotuals",
