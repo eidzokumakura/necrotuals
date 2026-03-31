@@ -1,13 +1,9 @@
 {
-  "parent": "block/cube",
+  "parent": "necrotuals:custom/ritual_altar",
   "textures": {
-    "down": "necrotuals:block/ritual_center_texture",
-    "up": "necrotuals:block/ritual_center_texture",
-    "north": "necrotuals:block/ritual_center_texture",
-    "east": "necrotuals:block/ritual_center_texture",
-    "south": "necrotuals:block/ritual_center_texture",
-    "west": "necrotuals:block/ritual_center_texture",
-    "particle": "necrotuals:block/ritual_center_texture"
+    "all": "necrotuals:block/tier1altar",
+    "particle": "necrotuals:block/ritual_center_texture",
+    "0": "necrotuals:block/tier1altar"
   },
   "render_type": "solid"
 }

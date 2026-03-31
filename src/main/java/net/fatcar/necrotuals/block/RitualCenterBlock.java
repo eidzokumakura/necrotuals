@@ -14,9 +14,12 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.fatcar.necrotuals.procedures.RitualCenterOnTickUpdateProcedure;
 import net.fatcar.necrotuals.procedures.RitualCenterOnBlockRightClickedProcedure;
 
 public class RitualCenterBlock extends Block {
@@ -25,13 +28,34 @@ public class RitualCenterBlock extends Block {
 	}
 
 	@Override
+	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+		return true;
+	}
+
+	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
+		return 0;
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		world.scheduleTick(pos, this, 20);
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.tick(blockstate, world, pos, random);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		RitualCenterOnTickUpdateProcedure.execute(world, x, y, z);
+		world.scheduleTick(pos, this, 20);
 	}
 
 	@Override

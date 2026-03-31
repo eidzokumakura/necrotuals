@@ -46,21 +46,21 @@ public class RitualCenterOnBlockRightClickedProcedure {
 		}
 		if (!isAltarWrong) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.PORTAL, (x + 2), y, (z + 1), 10, 0, 1, 0, 0.1);
+				_level.sendParticles(ParticleTypes.PORTAL, (x + 2.5), y, (z + 1.5), 50, 0, 2, 0, 0.1);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.PORTAL, (x + 2), y, (z - 1), 10, 0, 1, 0, 0.1);
+				_level.sendParticles(ParticleTypes.PORTAL, (x + 2.5), y, (z - 0.5), 50, 0, 2, 0, 0.1);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.PORTAL, (x - 2), y, (z + 1), 10, 0, 1, 0, 0.1);
+				_level.sendParticles(ParticleTypes.PORTAL, (x - 1.5), y, (z + 1.5), 50, 0, 2, 0, 0.1);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.PORTAL, (x - 2), y, (z - 1), 10, 0, 1, 0, 0.1);
+				_level.sendParticles(ParticleTypes.PORTAL, (x - 1.5), y, (z - 0.5), 50, 0, 2, 0, 0.1);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.PORTAL, (x + 1), y, (z + 2), 10, 0, 1, 0, 0.1);
+				_level.sendParticles(ParticleTypes.PORTAL, (x + 1.5), y, (z + 2.5), 50, 0, 2, 0, 0.1);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.PORTAL, (x + 1), y, (z - 2), 10, 0, 1, 0, 0.1);
+				_level.sendParticles(ParticleTypes.PORTAL, (x + 1.5), y, (z - 1.5), 50, 0, 2, 0, 0.1);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.PORTAL, (x - 1), y, (z + 2), 10, 0, 1, 0, 0.1);
+				_level.sendParticles(ParticleTypes.PORTAL, (x - 0.5), y, (z + 2.5), 50, 0, 2, 0, 0.1);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.PORTAL, (x - 1), y, (z - 2), 10, 0, 1, 0, 0.1);
+				_level.sendParticles(ParticleTypes.PORTAL, (x - 0.5), y, (z - 1.5), 50, 0, 2, 0, 0.1);
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ON_FIRE)), 1);
 		}
 	}

@@ -42,11 +42,63 @@
       "registry_name": "ritual_center",
       "metadata": {
         "files": [
+          "src/main/java/net/fatcar/necrotuals/block/RitualCenterBlock.java",
           "src/main/resources/assets/necrotuals/models/item/ritual_center.json",
           "src/main/resources/assets/necrotuals/blockstates/ritual_center.json",
-          "src/main/resources/assets/necrotuals/models/block/ritual_center.json",
           "src/main/resources/data/necrotuals/loot_tables/blocks/ritual_center.json",
-          "src/main/java/net/fatcar/necrotuals/block/RitualCenterBlock.java"
+          "src/main/resources/assets/necrotuals/models/block/ritual_center.json"
+        ]
+      }
+    },
+    {
+      "name": "RitualCenterOnEntityDiesNearby",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ritual_center_on_entity_dies_nearby",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fatcar/necrotuals/procedures/RitualCenterOnEntityDiesNearbyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RitualCenterOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ritual_center_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fatcar/necrotuals/procedures/RitualCenterOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       }
     }
