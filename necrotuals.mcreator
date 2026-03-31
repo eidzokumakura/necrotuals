@@ -1,11 +1,60 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "RitualCenterOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ritual_center_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fatcar/necrotuals/procedures/RitualCenterOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RitualCenter",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ritual_center",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fatcar/necrotuals/block/RitualCenterBlock.java",
+          "src/main/resources/assets/necrotuals/models/item/ritual_center.json",
+          "src/main/resources/assets/necrotuals/blockstates/ritual_center.json",
+          "src/main/resources/data/necrotuals/loot_tables/blocks/ritual_center.json",
+          "src/main/resources/assets/necrotuals/models/block/ritual_center.json"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.necrotuals.ritual_center": "Ritual Center"
+    }
   },
   "foldersRoot": {
     "name": "~",

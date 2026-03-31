@@ -17,6 +17,10 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.fatcar.necrotuals.init.NecrotualsModTabs;
+import net.fatcar.necrotuals.init.NecrotualsModItems;
+import net.fatcar.necrotuals.init.NecrotualsModBlocks;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -36,6 +40,12 @@ public class NecrotualsMod {
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		NecrotualsModBlocks.REGISTRY.register(bus);
+
+		NecrotualsModItems.REGISTRY.register(bus);
+
+		NecrotualsModTabs.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

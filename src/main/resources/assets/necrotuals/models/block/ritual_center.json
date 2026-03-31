@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "necrotuals:block/ritual_center_texture",
+    "up": "necrotuals:block/ritual_center_texture",
+    "north": "necrotuals:block/ritual_center_texture",
+    "east": "necrotuals:block/ritual_center_texture",
+    "south": "necrotuals:block/ritual_center_texture",
+    "west": "necrotuals:block/ritual_center_texture",
+    "particle": "necrotuals:block/ritual_center_texture"
+  },
+  "render_type": "solid"
+}

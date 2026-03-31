@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "necrotuals:blocks/ritual_center",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "necrotuals:ritual_center"
+        }
+      ]
+    }
+  ]
+}
