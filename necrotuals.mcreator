@@ -159,6 +159,19 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "SunnyAmber",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunny_amber",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/necrotuals/models/item/sunny_amber.json",
+          "src/main/java/net/fatcar/necrotuals/item/SunnyAmberItem.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -176,6 +189,7 @@
     "en_us": {
       "block.necrotuals.ritual_center": "Ritual Center",
       "item.necrotuals.clear_soul.description_0": "Душу можно получить убив мирное существо рядом с алтарём",
+      "item.necrotuals.sunny_amber": "Sunny Amber",
       "item.necrotuals.dirty_soul.description_0": "Душу можно получить убив враждебное существо рядом с алтарём",
       "block.necrotuals.amber": "Sun Amber",
       "item_group.necrotuals.necrotuals": "Necrotuals",

@@ -24,6 +24,7 @@ public class NecrotualsModTabs {
 	public static final RegistryObject<CreativeModeTab> NECROTUALS = REGISTRY.register("necrotuals",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.necrotuals.necrotuals")).icon(() -> new ItemStack(NecrotualsModItems.CLEAR_SOUL.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(NecrotualsModBlocks.AMBER.get().asItem());
+				tabData.accept(NecrotualsModItems.SUNNY_AMBER.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent

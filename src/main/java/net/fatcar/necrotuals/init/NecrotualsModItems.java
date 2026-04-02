@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.fatcar.necrotuals.item.SunnyAmberItem;
 import net.fatcar.necrotuals.item.DirtySoulItem;
 import net.fatcar.necrotuals.item.ClearSoulItem;
 import net.fatcar.necrotuals.NecrotualsMod;
@@ -22,6 +23,7 @@ public class NecrotualsModItems {
 	public static final RegistryObject<Item> CLEAR_SOUL = REGISTRY.register("clear_soul", () -> new ClearSoulItem());
 	public static final RegistryObject<Item> DIRTY_SOUL = REGISTRY.register("dirty_soul", () -> new DirtySoulItem());
 	public static final RegistryObject<Item> AMBER = block(NecrotualsModBlocks.AMBER);
+	public static final RegistryObject<Item> SUNNY_AMBER = REGISTRY.register("sunny_amber", () -> new SunnyAmberItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

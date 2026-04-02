@@ -1,6 +1,8 @@
 
 package net.fatcar.necrotuals.block;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
@@ -10,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class AmberBlock extends Block {
 	public AmberBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.BASALT).strength(1.5f, 10f).requiresCorrectToolForDrops().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true));
+		super(BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).strength(2.5f, 10f).lightLevel(s -> 4).requiresCorrectToolForDrops());
 	}
 
 	@Override

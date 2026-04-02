@@ -1,13 +1,29 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "size": 3,
+    "size": 6,
     "discard_chance_on_air_exposure": 0,
     "targets": [
       {
         "target": {
-          "predicate_type": "tag_match",
-          "tag": "stone_ore_replaceables"
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate",
+            "Properties": {
+              "axis": "y"
+            }
+          }
+        },
+        "state": {
+          "Name": "necrotuals:amber"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate_tiles"
+          }
         },
         "state": {
           "Name": "necrotuals:amber"

@@ -1,6 +1,7 @@
 {
   "block.necrotuals.ritual_center": "Ritual Center",
   "item.necrotuals.clear_soul.description_0": "Душу можно получить убив мирное существо рядом с алтарём",
+  "item.necrotuals.sunny_amber": "Sunny Amber",
   "item.necrotuals.dirty_soul.description_0": "Душу можно получить убив враждебное существо рядом с алтарём",
   "block.necrotuals.amber": "Sun Amber",
   "item_group.necrotuals.necrotuals": "Necrotuals",

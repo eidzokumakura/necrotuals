@@ -12,7 +12,7 @@
     "customModelName": "Normal",
     "rotationMode": 0,
     "enablePitch": false,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -38,7 +38,7 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 1.5,
+    "hardness": 2.5,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -49,7 +49,7 @@
     ],
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "Blocks.LARGE_AMETHYST_BUD"
+      "value": "CUSTOM:SunnyAmber"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -84,7 +84,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "BASALT"
+      "value": "DEEPSLATE"
     },
     "breakSound": {
       "value": ""
@@ -101,7 +101,7 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": 4,
     "unbreakable": false,
     "vanillaToolTier": "IRON",
     "isBonemealable": false,
@@ -125,13 +125,16 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "TAG:stone_ore_replaceables"
+        "value": "Blocks.DEEPSLATE"
+      },
+      {
+        "value": "Blocks.DEEPSLATE_TILES"
       }
     ],
     "generationShape": "TRIANGLE",
-    "frequencyPerChunks": 8,
-    "frequencyOnChunk": 3,
-    "minGenerateHeight": -60,
-    "maxGenerateHeight": 0
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 6,
+    "minGenerateHeight": -48,
+    "maxGenerateHeight": 8
   }
 }
