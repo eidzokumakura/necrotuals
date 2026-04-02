@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "minecraft:block/blue_orchid",
-    "up": "necrotuals:block/texture",
-    "north": "minecraft:block/cartography_table_top",
-    "east": "minecraft:block/birch_planks",
-    "south": "minecraft:block/barrel_top_open",
-    "west": "minecraft:block/blue_glazed_terracotta",
-    "particle": "minecraft:block/blue_orchid"
+    "down": "necrotuals:block/deepslatetop",
+    "up": "necrotuals:block/deepslatetop",
+    "north": "necrotuals:block/deepslatesides",
+    "east": "necrotuals:block/deepslatesides",
+    "south": "necrotuals:block/deepslatesides",
+    "west": "necrotuals:block/deepslatesides",
+    "particle": "necrotuals:block/deepslatetop"
   },
   "render_type": "solid"
 }
