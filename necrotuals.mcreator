@@ -130,17 +130,44 @@
           "src/main/resources/assets/necrotuals/models/item/dirty_soul.json"
         ]
       }
+    },
+    {
+      "name": "Amber",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/necrotuals/models/block/amber.json",
+          "src/main/resources/assets/necrotuals/models/item/amber.json",
+          "src/main/resources/data/necrotuals/forge/biome_modifier/amber_biome_modifier.json",
+          "src/main/java/net/fatcar/necrotuals/block/AmberBlock.java",
+          "src/main/resources/data/necrotuals/worldgen/placed_feature/amber.json",
+          "src/main/resources/data/necrotuals/loot_tables/blocks/amber.json",
+          "src/main/resources/data/necrotuals/worldgen/configured_feature/amber.json",
+          "src/main/resources/assets/necrotuals/blockstates/amber.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Amber"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:Amber"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
       "block.necrotuals.ritual_center": "Ritual Center",
       "item.necrotuals.clear_soul.description_0": "Душу можно получить убив мирное существо рядом с алтарём",
       "item.necrotuals.dirty_soul.description_0": "Душу можно получить убив враждебное существо рядом с алтарём",
+      "block.necrotuals.amber": "Amber",
       "item.necrotuals.dirty_soul": "Dirty Soul",
       "item.necrotuals.clear_soul": "Clear Soul"
     }
