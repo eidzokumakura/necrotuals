@@ -4,13 +4,16 @@
  */
 package net.fatcar.necrotuals.init;
 
+import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
 import net.fatcar.necrotuals.NecrotualsMod;
@@ -18,6 +21,10 @@ import net.fatcar.necrotuals.NecrotualsMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class NecrotualsModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, NecrotualsMod.MODID);
+	public static final RegistryObject<CreativeModeTab> NECROTUALS = REGISTRY.register("necrotuals",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.necrotuals.necrotuals")).icon(() -> new ItemStack(NecrotualsModItems.CLEAR_SOUL.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(NecrotualsModBlocks.AMBER.get().asItem());
+			}).withSearchBar().build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {

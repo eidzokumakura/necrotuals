@@ -149,6 +149,16 @@
           "src/main/resources/assets/necrotuals/blockstates/amber.json"
         ]
       }
+    },
+    {
+      "name": "Necrotuals",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "necrotuals",
+      "metadata": {
+        "files": []
+      }
     }
   ],
   "variable_elements": [],
@@ -167,7 +177,8 @@
       "block.necrotuals.ritual_center": "Ritual Center",
       "item.necrotuals.clear_soul.description_0": "Душу можно получить убив мирное существо рядом с алтарём",
       "item.necrotuals.dirty_soul.description_0": "Душу можно получить убив враждебное существо рядом с алтарём",
-      "block.necrotuals.amber": "Amber",
+      "block.necrotuals.amber": "Sun Amber",
+      "item_group.necrotuals.necrotuals": "Necrotuals",
       "item.necrotuals.dirty_soul": "Dirty Soul",
       "item.necrotuals.clear_soul": "Clear Soul"
     }

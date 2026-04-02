@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "minecraft:blue_orchid",
-    "textureTop": "minecraft:carved_pumpkin",
+    "textureTop": "texture",
     "textureLeft": "minecraft:birch_planks",
     "textureFront": "minecraft:cartography_table_top",
     "textureRight": "minecraft:blue_glazed_terracotta",
@@ -34,15 +34,19 @@
       }
     ],
     "customProperties": [],
-    "name": "Amber",
+    "name": "Sun Amber",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 1.0,
+    "hardness": 1.5,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Necrotuals"
+      }
+    ],
     "destroyTool": "pickaxe",
     "customDrop": {
       "value": "Blocks.LARGE_AMETHYST_BUD"
@@ -127,7 +131,7 @@
     "generationShape": "TRIANGLE",
     "frequencyPerChunks": 8,
     "frequencyOnChunk": 3,
-    "minGenerateHeight": 0,
-    "maxGenerateHeight": 40
+    "minGenerateHeight": -60,
+    "maxGenerateHeight": 0
   }
 }

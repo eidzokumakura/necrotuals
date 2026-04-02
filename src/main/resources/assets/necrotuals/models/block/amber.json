@@ -2,7 +2,7 @@
   "parent": "block/cube",
   "textures": {
     "down": "minecraft:block/blue_orchid",
-    "up": "minecraft:block/carved_pumpkin",
+    "up": "necrotuals:block/texture",
     "north": "minecraft:block/cartography_table_top",
     "east": "minecraft:block/birch_planks",
     "south": "minecraft:block/barrel_top_open",
