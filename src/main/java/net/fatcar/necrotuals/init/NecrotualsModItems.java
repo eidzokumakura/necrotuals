@@ -7,6 +7,7 @@ package net.fatcar.necrotuals.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
@@ -24,6 +25,7 @@ public class NecrotualsModItems {
 	public static final RegistryObject<Item> DIRTY_SOUL = REGISTRY.register("dirty_soul", () -> new DirtySoulItem());
 	public static final RegistryObject<Item> AMBER = block(NecrotualsModBlocks.AMBER);
 	public static final RegistryObject<Item> SUNNY_AMBER = REGISTRY.register("sunny_amber", () -> new SunnyAmberItem());
+	public static final RegistryObject<Item> STUB_SPAWN_EGG = REGISTRY.register("stub_spawn_egg", () -> new ForgeSpawnEggItem(NecrotualsModEntities.STUB, -3355444, -10066330, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

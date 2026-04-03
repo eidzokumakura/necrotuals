@@ -19,6 +19,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.fatcar.necrotuals.init.NecrotualsModTabs;
 import net.fatcar.necrotuals.init.NecrotualsModItems;
+import net.fatcar.necrotuals.init.NecrotualsModEntities;
 import net.fatcar.necrotuals.init.NecrotualsModBlocks;
 
 import java.util.function.Supplier;
@@ -44,6 +45,7 @@ public class NecrotualsMod {
 		NecrotualsModBlocks.REGISTRY.register(bus);
 
 		NecrotualsModItems.REGISTRY.register(bus);
+		NecrotualsModEntities.REGISTRY.register(bus);
 
 		NecrotualsModTabs.REGISTRY.register(bus);
 

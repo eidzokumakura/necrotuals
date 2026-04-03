@@ -113,8 +113,8 @@
       "registry_name": "clear_soul",
       "metadata": {
         "files": [
-          "src/main/java/net/fatcar/necrotuals/item/ClearSoulItem.java",
-          "src/main/resources/assets/necrotuals/models/item/clear_soul.json"
+          "src/main/resources/assets/necrotuals/models/item/clear_soul.json",
+          "src/main/java/net/fatcar/necrotuals/item/ClearSoulItem.java"
         ]
       }
     },
@@ -139,14 +139,14 @@
       "registry_name": "amber",
       "metadata": {
         "files": [
-          "src/main/resources/assets/necrotuals/models/block/amber.json",
-          "src/main/resources/assets/necrotuals/models/item/amber.json",
-          "src/main/resources/data/necrotuals/forge/biome_modifier/amber_biome_modifier.json",
-          "src/main/java/net/fatcar/necrotuals/block/AmberBlock.java",
           "src/main/resources/data/necrotuals/worldgen/placed_feature/amber.json",
+          "src/main/resources/assets/necrotuals/blockstates/amber.json",
           "src/main/resources/data/necrotuals/loot_tables/blocks/amber.json",
+          "src/main/resources/assets/necrotuals/models/item/amber.json",
           "src/main/resources/data/necrotuals/worldgen/configured_feature/amber.json",
-          "src/main/resources/assets/necrotuals/blockstates/amber.json"
+          "src/main/resources/data/necrotuals/forge/biome_modifier/amber_biome_modifier.json",
+          "src/main/resources/assets/necrotuals/models/block/amber.json",
+          "src/main/java/net/fatcar/necrotuals/block/AmberBlock.java"
         ]
       }
     },
@@ -168,8 +168,36 @@
       "registry_name": "sunny_amber",
       "metadata": {
         "files": [
-          "src/main/resources/assets/necrotuals/models/item/sunny_amber.json",
-          "src/main/java/net/fatcar/necrotuals/item/SunnyAmberItem.java"
+          "src/main/java/net/fatcar/necrotuals/item/SunnyAmberItem.java",
+          "src/main/resources/assets/necrotuals/models/item/sunny_amber.json"
+        ]
+      }
+    },
+    {
+      "name": "StubPlaybackCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stub_playback_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fatcar/necrotuals/procedures/StubPlaybackConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Scripts"
+    },
+    {
+      "name": "Stub",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stub",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fatcar/necrotuals/client/renderer/StubRenderer.java",
+          "src/main/java/net/fatcar/necrotuals/entity/StubEntity.java",
+          "src/main/resources/assets/necrotuals/models/item/stub_spawn_egg.json"
         ]
       }
     }
@@ -177,16 +205,17 @@
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
-    "BLOCKS:minecraft:mineable/pickaxe": [
+    "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:Amber"
     ],
-    "BLOCKS:minecraft:needs_iron_tool": [
+    "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:Amber"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "entity.necrotuals.stub": "Stub",
       "block.necrotuals.ritual_center": "Ritual Center",
       "item.necrotuals.clear_soul.description_0": "Душу можно получить убив мирное существо рядом с алтарём",
       "item.necrotuals.sunny_amber": "Sunny Amber",
@@ -194,6 +223,7 @@
       "block.necrotuals.amber": "Sun Amber",
       "item_group.necrotuals.necrotuals": "Necrotuals",
       "item.necrotuals.dirty_soul": "Dirty Soul",
+      "item.necrotuals.stub_spawn_egg": "Stub Spawn Egg",
       "item.necrotuals.clear_soul": "Clear Soul"
     }
   },

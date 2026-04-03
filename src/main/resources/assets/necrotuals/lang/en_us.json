@@ -1,4 +1,5 @@
 {
+  "entity.necrotuals.stub": "Stub",
   "block.necrotuals.ritual_center": "Ritual Center",
   "item.necrotuals.clear_soul.description_0": "Душу можно получить убив мирное существо рядом с алтарём",
   "item.necrotuals.sunny_amber": "Sunny Amber",
@@ -6,5 +7,6 @@
   "block.necrotuals.amber": "Sun Amber",
   "item_group.necrotuals.necrotuals": "Necrotuals",
   "item.necrotuals.dirty_soul": "Dirty Soul",
+  "item.necrotuals.stub_spawn_egg": "Stub Spawn Egg",
   "item.necrotuals.clear_soul": "Clear Soul"
 }

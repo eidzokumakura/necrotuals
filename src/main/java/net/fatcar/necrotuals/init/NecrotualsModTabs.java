@@ -34,6 +34,8 @@ public class NecrotualsModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 			tabData.accept(NecrotualsModItems.CLEAR_SOUL.get());
 			tabData.accept(NecrotualsModItems.DIRTY_SOUL.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+			tabData.accept(NecrotualsModItems.STUB_SPAWN_EGG.get());
 		}
 	}
 }
